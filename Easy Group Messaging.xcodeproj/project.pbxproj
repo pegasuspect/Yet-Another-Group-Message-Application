@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF09699B1A4AF8C70046FAEC /* MessageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */; };
+		FF09699D1A4AFDCE0046FAEC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09699C1A4AFDCE0046FAEC /* Category.swift */; };
+		FF9B639A1A49AFBC000F5EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63991A49AFBC000F5EBD /* AppDelegate.swift */; };
+		FF9B639C1A49AFBC000F5EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B639B1A49AFBC000F5EBD /* ViewController.swift */; };
+		FF9B639F1A49AFBC000F5EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9B639D1A49AFBC000F5EBD /* Main.storyboard */; };
+		FF9B63A11A49AFBC000F5EBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9B63A01A49AFBC000F5EBD /* Images.xcassets */; };
+		FF9B63A41A49AFBC000F5EBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9B63A21A49AFBC000F5EBD /* LaunchScreen.xib */; };
+		FF9B63B01A49AFBC000F5EBD /* Easy_Group_MessagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63AF1A49AFBC000F5EBD /* Easy_Group_MessagingTests.swift */; };
+		FF9B63BA1A4A08CE000F5EBD /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63B91A4A08CE000F5EBD /* GroupsController.swift */; };
+		FF9B63BC1A4A112F000F5EBD /* TemplateCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63BB1A4A112F000F5EBD /* TemplateCategoryController.swift */; };
+		FF9B63BE1A4A11BA000F5EBD /* CreateGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63BD1A4A11BA000F5EBD /* CreateGroupController.swift */; };
+		FF9B63C01A4A1204000F5EBD /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63BF1A4A1204000F5EBD /* TemplateController.swift */; };
+		FF9B63C21A4A1275000F5EBD /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63C11A4A1275000F5EBD /* ContactsController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF9B63AA1A49AFBC000F5EBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF9B638C1A49AFBC000F5EBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF9B63931A49AFBC000F5EBD;
+			remoteInfo = "Easy Group Messaging";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTemplate.swift; sourceTree = "<group>"; };
+		FF09699C1A4AFDCE0046FAEC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FF9B63941A49AFBC000F5EBD /* Easy Group Messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Group Messaging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9B63981A49AFBC000F5EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF9B63991A49AFBC000F5EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF9B639B1A49AFBC000F5EBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF9B639E1A49AFBC000F5EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF9B63A01A49AFBC000F5EBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF9B63A31A49AFBC000F5EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FF9B63A91A49AFBC000F5EBD /* Easy Group MessagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy Group MessagingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9B63AE1A49AFBC000F5EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF9B63AF1A49AFBC000F5EBD /* Easy_Group_MessagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_Group_MessagingTests.swift; sourceTree = "<group>"; };
+		FF9B63B91A4A08CE000F5EBD /* GroupsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
+		FF9B63BB1A4A112F000F5EBD /* TemplateCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCategoryController.swift; sourceTree = "<group>"; };
+		FF9B63BD1A4A11BA000F5EBD /* CreateGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupController.swift; sourceTree = "<group>"; };
+		FF9B63BF1A4A1204000F5EBD /* TemplateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
+		FF9B63C11A4A1275000F5EBD /* ContactsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF9B63911A49AFBC000F5EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9B63A61A49AFBC000F5EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF9B638B1A49AFBC000F5EBD = {
+			isa = PBXGroup;
+			children = (
+				FF9B63961A49AFBC000F5EBD /* Easy Group Messaging */,
+				FF9B63AC1A49AFBC000F5EBD /* Easy Group MessagingTests */,
+				FF9B63951A49AFBC000F5EBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF9B63951A49AFBC000F5EBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF9B63941A49AFBC000F5EBD /* Easy Group Messaging.app */,
+				FF9B63A91A49AFBC000F5EBD /* Easy Group MessagingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF9B63961A49AFBC000F5EBD /* Easy Group Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				FF9B63B91A4A08CE000F5EBD /* GroupsController.swift */,
+				FF9B63991A49AFBC000F5EBD /* AppDelegate.swift */,
+				FF9B639B1A49AFBC000F5EBD /* ViewController.swift */,
+				FF9B639D1A49AFBC000F5EBD /* Main.storyboard */,
+				FF9B63A01A49AFBC000F5EBD /* Images.xcassets */,
+				FF9B63A21A49AFBC000F5EBD /* LaunchScreen.xib */,
+				FF9B63971A49AFBC000F5EBD /* Supporting Files */,
+				FF9B63BB1A4A112F000F5EBD /* TemplateCategoryController.swift */,
+				FF9B63BD1A4A11BA000F5EBD /* CreateGroupController.swift */,
+				FF9B63BF1A4A1204000F5EBD /* TemplateController.swift */,
+				FF9B63C11A4A1275000F5EBD /* ContactsController.swift */,
+				FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */,
+				FF09699C1A4AFDCE0046FAEC /* Category.swift */,
+			);
+			path = "Easy Group Messaging";
+			sourceTree = "<group>";
+		};
+		FF9B63971A49AFBC000F5EBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF9B63981A49AFBC000F5EBD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF9B63AC1A49AFBC000F5EBD /* Easy Group MessagingTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF9B63AF1A49AFBC000F5EBD /* Easy_Group_MessagingTests.swift */,
+				FF9B63AD1A49AFBC000F5EBD /* Supporting Files */,
+			);
+			path = "Easy Group MessagingTests";
+			sourceTree = "<group>";
+		};
+		FF9B63AD1A49AFBC000F5EBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF9B63AE1A49AFBC000F5EBD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF9B63931A49AFBC000F5EBD /* Easy Group Messaging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF9B63B31A49AFBC000F5EBD /* Build configuration list for PBXNativeTarget "Easy Group Messaging" */;
+			buildPhases = (
+				FF9B63901A49AFBC000F5EBD /* Sources */,
+				FF9B63911A49AFBC000F5EBD /* Frameworks */,
+				FF9B63921A49AFBC000F5EBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Easy Group Messaging";
+			productName = "Easy Group Messaging";
+			productReference = FF9B63941A49AFBC000F5EBD /* Easy Group Messaging.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF9B63A81A49AFBC000F5EBD /* Easy Group MessagingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF9B63B61A49AFBC000F5EBD /* Build configuration list for PBXNativeTarget "Easy Group MessagingTests" */;
+			buildPhases = (
+				FF9B63A51A49AFBC000F5EBD /* Sources */,
+				FF9B63A61A49AFBC000F5EBD /* Frameworks */,
+				FF9B63A71A49AFBC000F5EBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF9B63AB1A49AFBC000F5EBD /* PBXTargetDependency */,
+			);
+			name = "Easy Group MessagingTests";
+			productName = "Easy Group MessagingTests";
+			productReference = FF9B63A91A49AFBC000F5EBD /* Easy Group MessagingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF9B638C1A49AFBC000F5EBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = studenty;
+				TargetAttributes = {
+					FF9B63931A49AFBC000F5EBD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FF9B63A81A49AFBC000F5EBD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = FF9B63931A49AFBC000F5EBD;
+					};
+				};
+			};
+			buildConfigurationList = FF9B638F1A49AFBC000F5EBD /* Build configuration list for PBXProject "Easy Group Messaging" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF9B638B1A49AFBC000F5EBD;
+			productRefGroup = FF9B63951A49AFBC000F5EBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF9B63931A49AFBC000F5EBD /* Easy Group Messaging */,
+				FF9B63A81A49AFBC000F5EBD /* Easy Group MessagingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF9B63921A49AFBC000F5EBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9B639F1A49AFBC000F5EBD /* Main.storyboard in Resources */,
+				FF9B63A41A49AFBC000F5EBD /* LaunchScreen.xib in Resources */,
+				FF9B63A11A49AFBC000F5EBD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9B63A71A49AFBC000F5EBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF9B63901A49AFBC000F5EBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9B63C21A4A1275000F5EBD /* ContactsController.swift in Sources */,
+				FF09699B1A4AF8C70046FAEC /* MessageTemplate.swift in Sources */,
+				FF9B63BC1A4A112F000F5EBD /* TemplateCategoryController.swift in Sources */,
+				FF9B639C1A49AFBC000F5EBD /* ViewController.swift in Sources */,
+				FF9B63BA1A4A08CE000F5EBD /* GroupsController.swift in Sources */,
+				FF09699D1A4AFDCE0046FAEC /* Category.swift in Sources */,
+				FF9B639A1A49AFBC000F5EBD /* AppDelegate.swift in Sources */,
+				FF9B63BE1A4A11BA000F5EBD /* CreateGroupController.swift in Sources */,
+				FF9B63C01A4A1204000F5EBD /* TemplateController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9B63A51A49AFBC000F5EBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9B63B01A49AFBC000F5EBD /* Easy_Group_MessagingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF9B63AB1A49AFBC000F5EBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF9B63931A49AFBC000F5EBD /* Easy Group Messaging */;
+			targetProxy = FF9B63AA1A49AFBC000F5EBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF9B639D1A49AFBC000F5EBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF9B639E1A49AFBC000F5EBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF9B63A21A49AFBC000F5EBD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF9B63A31A49AFBC000F5EBD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF9B63B11A49AFBC000F5EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF9B63B21A49AFBC000F5EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF9B63B41A49AFBC000F5EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Easy Group Messaging/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF9B63B51A49AFBC000F5EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Easy Group Messaging/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FF9B63B71A49AFBC000F5EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Easy Group MessagingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Group Messaging.app/Easy Group Messaging";
+			};
+			name = Debug;
+		};
+		FF9B63B81A49AFBC000F5EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Easy Group MessagingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Group Messaging.app/Easy Group Messaging";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF9B638F1A49AFBC000F5EBD /* Build configuration list for PBXProject "Easy Group Messaging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9B63B11A49AFBC000F5EBD /* Debug */,
+				FF9B63B21A49AFBC000F5EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF9B63B31A49AFBC000F5EBD /* Build configuration list for PBXNativeTarget "Easy Group Messaging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9B63B41A49AFBC000F5EBD /* Debug */,
+				FF9B63B51A49AFBC000F5EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF9B63B61A49AFBC000F5EBD /* Build configuration list for PBXNativeTarget "Easy Group MessagingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9B63B71A49AFBC000F5EBD /* Debug */,
+				FF9B63B81A49AFBC000F5EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF9B638C1A49AFBC000F5EBD /* Project object */;
+}
