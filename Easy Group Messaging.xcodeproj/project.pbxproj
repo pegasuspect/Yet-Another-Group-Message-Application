@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF09699B1A4AF8C70046FAEC /* MessageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */; };
 		FF09699D1A4AFDCE0046FAEC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09699C1A4AFDCE0046FAEC /* Category.swift */; };
+		FF0D0C371A51895D00DC7CB7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D0C361A51895D00DC7CB7 /* Data.swift */; };
 		FF9B639A1A49AFBC000F5EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B63991A49AFBC000F5EBD /* AppDelegate.swift */; };
 		FF9B639C1A49AFBC000F5EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B639B1A49AFBC000F5EBD /* ViewController.swift */; };
 		FF9B639F1A49AFBC000F5EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9B639D1A49AFBC000F5EBD /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTemplate.swift; sourceTree = "<group>"; };
 		FF09699C1A4AFDCE0046FAEC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FF0D0C361A51895D00DC7CB7 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		FF9B63941A49AFBC000F5EBD /* Easy Group Messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Group Messaging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9B63981A49AFBC000F5EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF9B63991A49AFBC000F5EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				FF9B63C11A4A1275000F5EBD /* ContactsController.swift */,
 				FF09699A1A4AF8C70046FAEC /* MessageTemplate.swift */,
 				FF09699C1A4AFDCE0046FAEC /* Category.swift */,
+				FF0D0C361A51895D00DC7CB7 /* Data.swift */,
 			);
 			path = "Easy Group Messaging";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF9B63C21A4A1275000F5EBD /* ContactsController.swift in Sources */,
+				FF0D0C371A51895D00DC7CB7 /* Data.swift in Sources */,
 				FF09699B1A4AF8C70046FAEC /* MessageTemplate.swift in Sources */,
 				FF9B63BC1A4A112F000F5EBD /* TemplateCategoryController.swift in Sources */,
 				FF9B639C1A49AFBC000F5EBD /* ViewController.swift in Sources */,

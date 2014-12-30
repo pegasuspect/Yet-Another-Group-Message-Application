@@ -12,4 +12,6 @@ class MessageTemplate {
     var text: String = ""
     var likeCount: Int = 0
     var date: String = ""
+    var id: String = ""
+    var liked: Bool = false
 }
