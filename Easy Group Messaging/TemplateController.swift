@@ -41,16 +41,17 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
             
             if let Data: AnyObject = json["Data"] {
                 let dataValue = Data as [[String: AnyObject]]
-                dispatch_async(dispatch_get_main_queue(), {
-                    for category in dataValue {
-                        var item = MessageTemplate()
-                        item.date = category["Date"] as String
-                        item.likeCount = category["LikeCount"] as Int
-                        item.text = self.decodeString(category["Text"] as String)
-                        
-                        self.data.append(item)
-                    }
+                
+                for category in dataValue {
+                    var item = MessageTemplate()
+                    item.date = category["Date"] as String
+                    item.likeCount = category["LikeCount"] as Int
+                    item.text = category["Text"] as String
                     
+                    self.data.append(item)
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), {
                     NSLog("Downloading finished!")
                     self.tableView.reloadData()
                 })
@@ -68,12 +69,18 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
         
         let txtLabel = cell.viewWithTag(1) as UILabel
         let dateLabel = cell.viewWithTag(2) as UILabel
-        let likeBtn = cell.viewWithTag(3) as UISwitch
+        let likeCountLabel = cell.viewWithTag(4) as UILabel
+
+        let likeBtn = cell.viewWithTag(3) as UIButton
+        
+        var onImg = UIImage(named: "logo1.png")
+        var offImg = UIImage(named: "logo2.png")
         
         txtLabel.text = template.text
         dateLabel.text = template.date
+        likeCountLabel.text = template.likeCount.description
         
-        likeBtn.on = template.liked
+        likeBtn.selected = template.liked
         
         return cell
     }
@@ -83,14 +90,5 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func decodeString(encodedString: String) -> String {
-        let encodedData = encodedString.dataUsingEncoding(NSUTF8StringEncoding)!
-        let attributedOptions = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
-        let attributedString = NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil, error: nil)
-        
-        let decodedString = attributedString?.string // The Weeknd ‘King Of The Fall’
-        return decodedString!
     }
 }
