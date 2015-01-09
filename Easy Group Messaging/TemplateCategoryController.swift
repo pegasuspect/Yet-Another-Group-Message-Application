@@ -16,7 +16,7 @@ class TemplateCategoryController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getListUrl = Category.baseUrl + "GetMessageCategories.ashx"
+        getListUrl = "GetMessageCategories.ashx"
         getListUrl += "?ContentLangCode=en-US"
         fetch()
     }
@@ -26,11 +26,8 @@ class TemplateCategoryController: UITableViewController {
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), {
             NSLog("Downloading started! For: " + self.getListUrl)
-            let query = self.getListUrl + "&rnd=" + rand().description
-            let nsurl = NSURL(string: query)
-            let noJsonData = NSData(contentsOfURL: nsurl!)
-            let nsdata = NSData(contentsOfURL: nsurl!)
-            let json = NSJSONSerialization.JSONObjectWithData(nsdata!, options: NSJSONReadingOptions.AllowFragments, error: nil) as 	[String: AnyObject]
+            
+            let json = Data.getJSON(self.getListUrl)
             
             if let Data: AnyObject = json["Data"] {
                 let dataValue = Data as [String]
@@ -53,7 +50,7 @@ class TemplateCategoryController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryName") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryNameCell") as UITableViewCell
         let category = data[indexPath.item]
         cell.textLabel!.text = category.title
         

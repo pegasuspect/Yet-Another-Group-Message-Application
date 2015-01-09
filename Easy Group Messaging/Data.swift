@@ -26,4 +26,21 @@ struct Data {
                 NSKeyedArchiver.archivedDataWithRootObject(newValue), forKey: "likedIds")
         }
     }
+    
+    
+    private struct BaseURL { static let baseUrl: String = "http://messagetemplates.osmansekerlen.com/" }
+    internal static var baseUrl: String {
+        get { return BaseURL.baseUrl }
+    }
+    
+    
+    static func getJSON(method: String) -> [String: AnyObject]{
+        var query = Data.baseUrl + method + "&rnd=" + rand().description
+        query = query.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let nsurl = NSURL(string: query)
+        NSData(contentsOfURL: nsurl!)
+        let nsdata = NSData(contentsOfURL: nsurl!)
+        let json = NSJSONSerialization.JSONObjectWithData(nsdata!, options: NSJSONReadingOptions.AllowFragments, error: nil) as [String: AnyObject]
+        return json
+    }
 }

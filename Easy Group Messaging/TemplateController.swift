@@ -10,6 +10,8 @@ import UIKit
 
 class TemplateController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var offImg = UIImage(named: "logo132x36.png")
+    var onImg = UIImage(named: "logo232x36.png")
     var categoryName: String!
     
     var getListUrl = ""
@@ -20,7 +22,7 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
         
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        getListUrl = Category.baseUrl + "GetMessages.ashx"
+        getListUrl = "GetMessages.ashx"
         getListUrl += "?ContentLangCode=en-US"
         getListUrl += "&Category=" + categoryName
         
@@ -33,11 +35,8 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), {
             NSLog("Downloading started! For: " + self.getListUrl)
             var query = self.getListUrl
-            query = query.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-            let nsurl = NSURL(string: query)
-            let noJsonData = NSData(contentsOfURL: nsurl!)
-            let nsdata = NSData(contentsOfURL: nsurl!)
-            let json = NSJSONSerialization.JSONObjectWithData(nsdata!, options: NSJSONReadingOptions.AllowFragments, error: nil) as 	[String: AnyObject]
+            
+            let json = Data.getJSON(self.getListUrl)
             
             if let Data: AnyObject = json["Data"] {
                 let dataValue = Data as [[String: AnyObject]]
@@ -59,6 +58,12 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
         })
     }
     
+    @IBAction func touchUpInside(sender: AnyObject) {
+        var btn = sender as UIButton
+        btn.selected = !btn.selected
+        
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -73,14 +78,15 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
 
         let likeBtn = cell.viewWithTag(3) as UIButton
         
-        var onImg = UIImage(named: "logo1.png")
-        var offImg = UIImage(named: "logo2.png")
-        
         txtLabel.text = template.text
         dateLabel.text = template.date
         likeCountLabel.text = template.likeCount.description
         
+        likeBtn.setBackgroundImage(onImg, forState: UIControlState.Selected)
+        likeBtn.setBackgroundImage(offImg, forState: UIControlState.Normal)
+        
         likeBtn.selected = template.liked
+        
         
         return cell
     }

@@ -11,11 +11,5 @@ import Foundation
 struct Category {
     var title: String = ""
     
-    //Static variable definition
-    private struct BaseURL { static let baseUrl: String = "http://messagetemplates.osmansekerlen.com/" }
-    internal static var baseUrl: String {
-        get { return BaseURL.baseUrl }
-    }
-    
     var templates: [MessageTemplate] = []
 }
