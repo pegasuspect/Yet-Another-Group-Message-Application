@@ -21,10 +21,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        var groupsDict: [[String: [[String: String]]]] = []
-        NSUserDefaults.standardUserDefaults().setObject(
-            NSKeyedArchiver.archivedDataWithRootObject(groupsDict), forKey: "groups")
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -17,7 +17,13 @@ class ContactsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        for contact in data {
+            contact.selected = false
+        }
+        tableView.reloadData()
     }
     
     
