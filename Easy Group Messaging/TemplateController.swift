@@ -16,6 +16,7 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
     
     var getListUrl = ""
     var data = [MessageTemplate]()
+    var likedIds = Data.Likes
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +42,16 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
             if let Data: AnyObject = json["Data"] {
                 let dataValue = Data as [[String: AnyObject]]
                 
-                for category in dataValue {
+                for (i, category) in enumerate(dataValue){
                     var item = MessageTemplate()
                     item.date = category["Date"] as String
                     item.likeCount = category["LikeCount"] as Int
                     item.text = category["Text"] as String
+                    item.id = category["Id"] as String
+                    
+                    item.liked = self.likedIds.containsObject(item.id)
+                    
+                    item.index = i
                     
                     self.data.append(item)
                 }
@@ -60,8 +66,27 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
     
     @IBAction func touchUpInside(sender: AnyObject) {
         var btn = sender as UIButton
-        btn.selected = !btn.selected
-        
+        var cellId = btn.titleLabel?.text
+        var currentTemplate = data[ data.filter{$0.id == cellId }[0].index ]
+        if !currentTemplate.liked {
+            if !likedIds.containsObject(cellId!){
+                likedIds.addObject(cellId!)
+                currentTemplate.like({
+                    btn.selected = !btn.selected
+                    Data.Likes = self.likedIds
+                    self.tableView.reloadData()
+                })
+            }
+        } else {
+            if likedIds.containsObject(cellId!){
+                likedIds.removeObject(cellId!)
+                currentTemplate.dislike({
+                    btn.selected = !btn.selected
+                    Data.Likes = self.likedIds
+                    self.tableView.reloadData()
+                })
+            }
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,12 +110,23 @@ class TemplateController: UITableViewController, UITableViewDataSource, UITableV
         likeBtn.setBackgroundImage(onImg, forState: UIControlState.Selected)
         likeBtn.setBackgroundImage(offImg, forState: UIControlState.Normal)
         
+        likeBtn.titleLabel?.text = template.id
+        likeBtn.titleLabel?.hidden = true
+        
         likeBtn.selected = template.liked
         
         
         return cell
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("TemplateTextCell") as UITableViewCell
+        let template = data[indexPath.item]
+        
+        Data.Message = template
+    }
+
     
     
     override func didReceiveMemoryWarning() {
